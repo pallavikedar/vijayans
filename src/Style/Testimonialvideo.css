@@ -1,0 +1,197 @@
+/* Testimonial Slider Container */
+.testimonial-slider2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgb(236, 246, 250), #f1fcff, #fdfdfd);
+  padding: 40px;
+  width: 100%;
+  height: 100vh;
+  border-radius: 15px;
+  margin: auto;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+  
+  .testimonial-slider h1 {
+    font-size: 1.2rem;
+    color: #3b5998;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .health-container {
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #6195ab;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+  
+  .health-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .health-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .health-item {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px 0;
+    color: #444;
+    background: #fff;
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+  
+  .health-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .health-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .testimonial-slider p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Testimonial Card Styling */
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+   
+    /* width: 400px; */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+  
+  .testimonial-card video {
+    width: 100%;
+    
+    height: 350px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .testimonial-author {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+  /* Dots (Pagination) Styling */
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    background-color: rgba(24, 50, 100, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #3b5998;
+    transform: scale(1.3);
+  }
+  
+  /* Professional Hover Effects */
+  .testimonial-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+  }
+  
+  .dot:hover {
+    background-color: rgba(24, 50, 100, 0.8);
+  }
+  
+  /* Fade-in and Translate-up Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-slider {
+      max-width: 90%;
+      padding: 20px;
+    }
+  
+    .testimonial-card {
+      max-width: 90%;
+    }
+  
+    .testimonial-text {
+      font-size: 1rem;
+    }
+  
+    .testimonial-author {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-slider h1 {
+      font-size: 1.5rem;
+    }
+  
+    .testimonial-slider ul li {
+      font-size: 1rem;
+    }
+  
+    .testimonial-card {
+      padding: 15px;
+    }
+  }
+  

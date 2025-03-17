@@ -1,0 +1,30 @@
+/* General Styles */
+.slider_container {
+  width: 100%;
+  height: 800px;
+  /* margin: 20px auto; */
+  overflow: hidden;
+  position: relative;
+  /* border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.slider_wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slider_image {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: fill;
+  /* position: 100% 100%; */
+}
+@media (max-width: 426px) {
+  .slider_container {
+    height: 100%;
+  }
+}
