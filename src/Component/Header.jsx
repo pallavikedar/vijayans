@@ -10,6 +10,10 @@ function Header() {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="header_wrapper">
       <div className="header_logo_side">
@@ -18,12 +22,12 @@ function Header() {
       
       <nav className={`navbaar_wrapper ${menuOpen ? "show_menu" : ""}`}>
         <ul className="nav_links">
-          <li><NavLink to="/" className="navlink">Home</NavLink></li>
-          <li><NavLink to="/about" className="navlink">About</NavLink></li>
-          <li><NavLink to="/article" className="navlink">Articles</NavLink></li>
-          <li><NavLink to="/faq" className="navlink">FAQ</NavLink></li>
-          <li><NavLink to="/chetna" className="navlink">Chetna</NavLink></li>
-          <li><NavLink to="/contact" className="navlink">Contact</NavLink></li>
+          <li><NavLink to="/" className="navlink" onClick={closeMenu}>Home</NavLink></li>
+          <li><NavLink to="/about" className="navlink" onClick={closeMenu}>About</NavLink></li>
+          <li><NavLink to="/article" className="navlink" onClick={closeMenu}>Articles</NavLink></li>
+          <li><NavLink to="/faq" className="navlink" onClick={closeMenu}>FAQ</NavLink></li>
+          <li><NavLink to="/chetna" className="navlink" onClick={closeMenu}>Chetna</NavLink></li>
+          <li><NavLink to="/contact" className="navlink" onClick={closeMenu}>Contact</NavLink></li>
         </ul>
       </nav>
       
