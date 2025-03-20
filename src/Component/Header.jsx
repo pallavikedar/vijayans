@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import main_logo from "../Assets/Images/logo.png";
 import "../Style/header.css";
-import { NavLink } from "react-router-dom";
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -10,49 +11,30 @@ function Header() {
   };
 
   return (
-    <>
-      <div className="header_wrapper">
-        <div className="header_logo_side">
-          <img src={main_logo} alt="Logo" />
-          
-        </div>
-        <div className={`navbaar_wrapper ${menuOpen ? "show_menu" : ""}`}>
-          <ul>
-            <NavLink to={"/"} className={"navlink"}>
-              Home
-            </NavLink>
-            <NavLink to={"/about"} className={"navlink"}>
-              About
-            </NavLink>
-
-            <NavLink className={"navlink"} to={"/article"}>
-              Articles
-            </NavLink>
-            <NavLink className={"navlink"} to={"/faq"}>
-              FAQ
-            </NavLink>
-         
-            <NavLink className={"navlink"} to={"/chetna"}>
-              Chetna
-            </NavLink>
-            <NavLink className={"navlink"}>Contact</NavLink>
-          </ul>
-        </div>
-
-        {/* Hamburger button */}
-
-        {/* Navigation menu */}
-
-        <div className="hamburger" onClick={toggleMenu}>
-          {menuOpen ? (
-            <span className="cross">&#10005;</span>
-          ) : (
-            <span>&#9776;</span>
-          )}
-        </div>
+    <header className="header_wrapper">
+      <div className="header_logo_side">
+        <img src={main_logo} alt="Logo" className="logo" />
       </div>
-      {/* <Slider /> */}
-    </>
+      
+      <nav className={`navbaar_wrapper ${menuOpen ? "show_menu" : ""}`}>
+        <ul className="nav_links">
+          <li><NavLink to="/" className="navlink">Home</NavLink></li>
+          <li><NavLink to="/about" className="navlink">About</NavLink></li>
+          <li><NavLink to="/article" className="navlink">Articles</NavLink></li>
+          <li><NavLink to="/faq" className="navlink">FAQ</NavLink></li>
+          <li><NavLink to="/chetna" className="navlink">Chetna</NavLink></li>
+          <li><NavLink to="/contact" className="navlink">Contact</NavLink></li>
+        </ul>
+      </nav>
+      
+      <div className="hamburger" onClick={toggleMenu}>
+        {menuOpen ? (
+          <span className="cross">&#10005;</span>
+        ) : (
+          <span>&#9776;</span>
+        )}
+      </div>
+    </header>
   );
 }
 

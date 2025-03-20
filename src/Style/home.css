@@ -62,7 +62,7 @@
   gap: 18px;
   font-size: 20px;
   font-weight: bold;
-}
+ }
 @media (max-width: 426px) {
   .why_choose_container {
     flex-direction: column;
@@ -89,8 +89,8 @@
     font-size: 12px;
     padding: 13px;
   }
-}
-/* Overall Section */
+} 
+
 /* Overall Section */
 .welcome_section {
   padding: 80px 20px;
@@ -199,13 +199,22 @@
   }
 
   .wlc_img_container {
-    max-width: 100%;
+    width: 100%;
   }
 
   .welcome_image {
-    max-width: 320px;
+    width: 90%;
   }
-
+  .welcome_heading {
+    font-size: 1.5rem;
+    
+  }
+  
+  /* Text Styling */
+  .welcome_text_container p {
+    font-size: 0.90rem;
+  
+  }
   .welcome_text_container {
     text-align: center;
   }
@@ -316,7 +325,7 @@
     /* width: 100%; */
     justify-content: center;
     align-items: center;
-    height: 89vh;
+    height: 75vh;
 }
 .hero_text_side {
   width: 48%;
@@ -528,4 +537,179 @@
   margin-top: 100px;
   margin-bottom: 50px;
   text-align: center;
+}
+/* Responsive Design for Membership Cards */
+@media (max-width: 768px) {
+  .memberShipDetail_card_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .memberShip_card_container {
+   
+    width: auto;
+   
+  }
+  .section_title {
+    
+    font-size: 1.5rem;
+  
+  }
+
+  .memberShip_card_one {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  
+.card_title {
+  font-size: 1.1rem;
+  
+}
+
+.card_price {
+  font-size: 1.2rem;
+  
+}
+
+.card_duration {
+  font-size: 1rem;
+ 
+}
+
+
+
+.card_features li {
+  font-size: 0.90rem;
+  color: #555;
+  margin: 5px 0;
+}
+}
+
+/* Responsive Design for Welcome Section */
+@media (max-width: 768px) {
+  .welcome_container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .wlc_img_container {
+    width: 100%;
+    height: auto;
+  }
+
+  .welcome_image {
+    width: 100%;
+    height: auto;
+  }
+  .welcome_heading {
+    font-size: 1.5rem;
+    
+  }
+  
+  /* Text Styling */
+  .welcome_text_container p {
+    font-size: 0.90rem;
+  
+  }
+
+  .welcome_text_container {
+    text-align: center;
+  }
+
+  .welcome_read_more_button {
+    margin: auto;
+  }
+}
+
+/* Responsive Design for Why Choose Section */
+@media (max-width: 768px) {
+  .why_choose_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why_choose_img {
+    width: 100%;
+    height: auto;
+  }
+
+  .why_choose_text {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .why_choose_container h2 {
+    font-size: 1.5rem;
+  }
+
+  .choose_lorem {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .choose_point {
+    gap: 10px;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 768px) {
+  .hero_text_side {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .home_hero_img {
+    display: flex;
+    /* background: linear-gradient(180deg, #e5f9edcb 0%, #b5d6c738 100%); */
+    background-image: url("http://localhost:3000/static/media/backgroundyoga%201.45f48d3bab770a861a6a.svg");
+    /* background-repeat: no-repeat; */
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+  .hero_image_side {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+  }
+
+  .hero_text_side h2 {
+    font-size: 2rem;
+  }
+
+  .hero_text_side p {
+    font-size: 1rem;
+  }
+
+  .hero_section_button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Responsive Design for Gallery Section */
+@media (max-width: 768px) {
+  .home_gallery_container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .home_gallery_container img {
+    height: 150px;
+  }
+  .section_title1 {
+   
+    font-size: 1.5rem;
+    
+  }
+}
+@media (max-width: 425px) {
+  
+  .hero_text_side h2 {
+    font-size: 1.5rem;
+  }
 }

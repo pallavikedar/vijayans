@@ -160,38 +160,82 @@
       transform: translateY(0);
     }
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .testimonial-slider {
-      max-width: 90%;
-      padding: 20px;
-    }
-  
-    .testimonial-card {
-      max-width: 90%;
-    }
-  
-    .testimonial-text {
-      font-size: 1rem;
-    }
-  
-    .testimonial-author {
-      font-size: 0.9rem;
-    }
+  /* Responsive Design for Testimonial Slider */
+@media (max-width: 768px) {
+  .testimonial-slider2 {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
   }
-  
-  @media (max-width: 480px) {
-    .testimonial-slider h1 {
-      font-size: 1.5rem;
-    }
-  
-    .testimonial-slider ul li {
-      font-size: 1rem;
-    }
-  
-    .testimonial-card {
-      padding: 15px;
-    }
+
+  .testimonial-card {
+    width: 90%;
+    margin: 20px auto;
   }
-  
+
+  .testimonial-slider h1 {
+    font-size: 1rem;
+  }
+
+  .health-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .health-title {
+    font-size: 20px;
+  }
+
+  .health-item {
+    font-size: 14px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-author {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-slider2 {
+    padding: 10px;
+  }
+
+  .testimonial-card {
+    padding: 15px;
+  }
+
+  .testimonial-slider h1 {
+    font-size: 0.9rem;
+  }
+
+  .health-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .health-item svg {
+    width: 20px;
+    height: 20px;
+   
+}
+  .health-title {
+    font-size: 18px;
+  }
+
+  .health-item {
+    font-size: 12px;
+    padding: 2px;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-author {
+    font-size: 0.8rem;
+  }
+}
