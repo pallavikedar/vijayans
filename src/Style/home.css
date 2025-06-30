@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #8ca8b5;
+  background: linear-gradient(45deg, #127ba8, #77afc6);
   padding: 20px;
 }
 .why_choose_container h2 {
@@ -319,10 +319,11 @@
 }
 .home_hero_img {
     display: flex;
-    /* background: linear-gradient(180deg, #e5f9edcb 0%, #b5d6c738 100%); */
-    background-image: url('../Assets/Images/backgroundyoga\ 1.svg');
+    background: linear-gradient(140deg, #0a7cad 0%, #001c28 100%);
+    /* background-image: url('../Assets/Images/backgroundyoga\ 1.svg'); */
     /* background-repeat: no-repeat; */
     /* width: 100%; */
+    
     justify-content: center;
     align-items: center;
     height: 75vh;
@@ -342,13 +343,13 @@
 }
 .hero_text_side h2 {
   font-size: 50px;
-  color: #015e86;
+  color: #ffffff;
   font-weight: bold;
   text-align: center;
 }
 .hero_text_side p {
   font-size: 28px;
-  color: #4d4d4d;
+  color: #edfaff;
   /* font-weight: 400; */
   line-height: 1.5;
   text-align: center;
@@ -388,8 +389,8 @@
   text-align: center;
   font-size: 2rem;
   color: #ffffff;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  /* margin-top: 50px;
+  margin-bottom: 50px; */
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -664,7 +665,7 @@
   .home_hero_img {
     display: flex;
     /* background: linear-gradient(180deg, #e5f9edcb 0%, #b5d6c738 100%); */
-    background-image: url("http://localhost:3000/static/media/backgroundyoga%201.45f48d3bab770a861a6a.svg");
+    /* background-image: url("http://localhost:3000/static/media/backgroundyoga%201.45f48d3bab770a861a6a.svg"); */
     /* background-repeat: no-repeat; */
     /* width: 100%; */
     justify-content: center;

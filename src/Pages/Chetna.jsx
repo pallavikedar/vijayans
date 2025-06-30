@@ -1,5 +1,6 @@
-import problemImg from "../Assets/Images/Group 128.jpg" // Add a relevant image
-import "../Style/chetna.css"
+import React from 'react';
+
+import "../Style/chetna.css";
 
 function Chetna() {
   const features = [
@@ -15,36 +16,34 @@ function Chetna() {
     "Helping children to lead a quality life and become a better person",
     "Enhancing the imagination and empathy of children through meditation",
     "Helping children to bond with family and friends through yoga and its morals",
-  ]
+  ];
+
   return (
-    <div className="chetna_container">
-      <h1 className="chetna_heading">Welcome to Chetna Consciousness</h1>
+    <div className="chetna-container">
+      <header className="chetna-header">
+        <h1 className="chetna-heading">Welcome to Chetna Consciousness</h1>
+      </header>
 
-      <div className="chetna_program_text">
-        <h2>Features of the Program</h2>
-        <div className="chetna_problem_image">
-          <img src={problemImg || "/placeholder.svg"} alt="Children Problems" />
+      <section className="chetna-program-section" role="region" aria-labelledby="features-heading">
+        <h2 id="features-heading">Features of the Program</h2>
+        <div className="chetna-content-wrapper">
+          
+          <div className="chetna-text-content">
+            <p>
+              In today's fast-paced world, children face increasing physical and mental challenges. To manage the pressures of home and school, they need activities that sustain their energy and foster long-term well-being. Beyond sports, yoga offers a holistic approach to development, promoting physical health, mental clarity, and emotional balance for a brighter future.
+            </p>
+            <ul className="chetna-features-list">
+              {features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div>
-          <p>
-            In today's modern world children are no doubt physically and mentally very active. To cope up with the
-            increasing pressure both at home and school children need some kind of physical and mental activity that
-            would not only keep up their energy levels but also help them in maintaining it. Apart from sports and
-            ground activities there needs to be a distinctive way to give them a better life not only now but also in
-            future. To achieve this there is nothing like regular practice of yoga. Yoga is beyond physical exercise.
-          </p>
-          <ul>
-            {features.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      </section>
 
-      <div className="chetna_problem_section">
-        <h2>Problems Faced by Children and Youngsters</h2>
-
-        <div className="chetna_problem_list">
+      <section className="chetna-problems-section" role="region" aria-labelledby="problems-heading">
+        <h2 id="problems-heading">Problems Faced by Children and Youngsters</h2>
+        <div className="chetna-problems-grid">
           <ul>
             <li>No discipline in life</li>
             <li>Being stubborn</li>
@@ -94,10 +93,9 @@ function Chetna() {
             <li>Various health issues since childhood</li>
           </ul>
         </div>
-      </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default Chetna
-
+export default Chetna;

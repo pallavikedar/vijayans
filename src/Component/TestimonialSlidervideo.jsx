@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../Style/Testimonialvideo.css";
+import { motion, useInView } from "framer-motion";
 import video1 from "../Assets/Video/review1.mp4";
 import video2 from "../Assets/Video/review2.mp4";
 import video3 from "../Assets/Video/review3.mp4";
@@ -77,38 +78,67 @@ const TestimonialSlidervideo = () => {
     }
   }, [currentIndex, isUserInteracted]);
 
+  // Scroll-based animation hooks
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true });
+
   return (
-    <div className="testimonial-slider2" onClick={handleUserInteraction}>
-      <div className="health-container">
+    <motion.div
+      ref={containerRef}
+      className="testimonial-slider2"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1 }}
+      onClick={handleUserInteraction}
+    >
+      {/* Health Benefits Section */}
+      <motion.div
+        className="health-container"
+        initial={{ opacity: 0, x: -50 }}
+        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
         <h1 className="health-title">Transform Your Health & Fitness!</h1>
         <ul className="health-list">
           {benefits.map((benefit, index) => (
-            <li key={index} className="health-item">
+            <motion.li
+              key={index}
+              className="health-item"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
               {benefit.icon}
               <strong>{benefit.text}</strong>
-            </li>
+            </motion.li>
           ))}
         </ul>
-      </div>
+      </motion.div>
 
-      <div className="testimonial-card fade-in">
+      {/* Testimonial Video Section */}
+      <motion.div
+        className="testimonial-card"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
         <video ref={videoRef} key={testimonials[currentIndex].video} controls>
           <source src={testimonials[currentIndex].video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <p className="testimonial-text">"{testimonials[currentIndex].text}"</p>
-        <p className="testimonial-author">- {testimonials[currentIndex].author}</p>
         <div className="dots-container">
           {testimonials.map((_, index) => (
-            <span
+            <motion.span
               key={index}
               className={`dot ${index === currentIndex ? "active" : ""}`}
               onClick={() => setCurrentIndex(index)}
-            ></span>
+              whileHover={{ scale: 1.2 }}
+            ></motion.span>
           ))}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

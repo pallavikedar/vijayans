@@ -24,7 +24,7 @@ function Header() {
         <ul className="nav_links">
           <li><NavLink to="/" className="navlink" onClick={closeMenu}>Home</NavLink></li>
           <li><NavLink to="/about" className="navlink" onClick={closeMenu}>About</NavLink></li>
-          <li><NavLink to="/article" className="navlink" onClick={closeMenu}>Articles</NavLink></li>
+      
           <li><NavLink to="/faq" className="navlink" onClick={closeMenu}>FAQ</NavLink></li>
           <li><NavLink to="/chetna" className="navlink" onClick={closeMenu}>Chetna</NavLink></li>
           <li><NavLink to="/contact" className="navlink" onClick={closeMenu}>Contact</NavLink></li>

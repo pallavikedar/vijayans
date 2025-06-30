@@ -1,13 +1,12 @@
 /* Global Styling */
 
-
 h2 {
   font-size: 32px;
   font-weight: 700;
   color: #0b6f9a;
   text-align: center;
   margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* p {
@@ -246,59 +245,45 @@ h2 {
   }
 
   .health_risks_list li {
-    
     padding: 8px 30px;
- 
+
     font-size: 14px;
-    
-}
+  }
 
   .mission_side,
   .vision_side {
     padding: 20px;
   }
   .additional_services_wrapper {
- 
     padding: 20px 12%;
-   
   }
-  
+
   .additional_services_wrapper h2 {
     font-size: 1.5rem;
-    
   }
   .service_card {
-    
     padding: 8px;
-   
   }
-  
-  
+
   .service_card .icon {
     font-size: 23px;
-   
   }
-  
+
   .service_card h3 {
     font-size: 1rem;
-   
   }
-  h2{
+  h2 {
     font-size: 1.5rem;
   }
   .owner_details_side p {
     font-size: 18px;
-    
   }
   .health_risks_wrapper {
-   
     padding: 29px 12%;
-    
-}
-.health_risks_wrapper h2 {
-  font-size: 1.5rem;
- 
-}
+  }
+  .health_risks_wrapper h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -318,62 +303,48 @@ h2 {
     max-width: 100%;
   }
   .additional_services_wrapper {
- 
     padding: 20px 12%;
-   
   }
-  
+
   .additional_services_wrapper h2 {
     font-size: 1.5rem;
-    
   }
   .service_card {
-    
     padding: 8px;
-   
   }
-  
-  
+
   .service_card .icon {
     font-size: 23px;
-   
   }
-  
+
   .service_card h3 {
     font-size: 1rem;
-   
   }
-  h2{
+  h2 {
     font-size: 1.5rem;
   }
   .owner_details_side p {
     font-size: 14px;
-    
   }
   .health_risks_wrapper {
-   
     padding: 29px 12%;
-    
-}
-.health_risks_wrapper h2 {
-  font-size: 1.5rem;
- 
-}
+  }
+  .health_risks_wrapper h2 {
+    font-size: 1.5rem;
+  }
 
-.health_risks_list li {
-    
-  padding: 8px 30px;
+  .health_risks_list li {
+    padding: 8px 30px;
 
-  font-size: 14px;
-  
-}
-.mission_side h2, .vision_side h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #0b6f9a;
-}
-.mission_vission_container {
-
-  padding: 19px 12%;
-}
+    font-size: 14px;
+  }
+  .mission_side h2,
+  .vision_side h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0b6f9a;
+  }
+  .mission_vission_container {
+    padding: 19px 12%;
+  }
 }

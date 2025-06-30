@@ -1,199 +1,251 @@
-/* General Container */
-.chetna_container {
-  font-family: "Arial", sans-serif;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 100px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Headings */
-.chetna_heading {
-  font-size: 2rem;
-  width: 100%;
-  font-weight: bold;
-  color: #ffff;
-  background-color: #015e86;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-/* Program Text */
-.chetna_program_text {
-  background: #ffffff;
-  padding: 20px;
-  width: 90%;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.chetna_program_text h2 {
-  font-size: 1.8rem;
-  color: #015e86;
-  margin-bottom: 10px;
-}
-
-.chetna_program_text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-  text-align: left;
-}
-
-.chetna_program_text ul {
-  list-style: none;
+/* Reset and Base Styles */
+* {
+  margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 100%;
+  box-sizing: border-box;
 }
 
-.chetna_program_text li {
+.chetna-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.chetna-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.chetna-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #015e86;
+  line-height: 1.2;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.chetna-heading::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 5px;
+  background: #015e86;
+  margin: 15px auto;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.chetna-heading:hover::after {
+  width: 150px;
+}
+
+/* Program Section */
+.chetna-program-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 30px rgba(1, 94, 134, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chetna-program-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(1, 94, 134, 0.15);
+}
+
+.chetna-program-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #015e86;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.chetna-content-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chetna-image-container {
+  flex: 1;
+  min-width: 320px;
+  max-width: 450px;
+}
+
+.chetna-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.chetna-image-container img:hover {
+  transform: scale(1.02);
+}
+
+.chetna-text-content {
+  flex: 2;
+  min-width: 300px;
+}
+
+.chetna-text-content p {
+  font-size: 1.1rem;
+  color: #2d3748;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.chetna-features-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.chetna-features-list li {
   font-size: 1rem;
-  padding: 8px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  background: #b8d3de;
-  color: #1f5770;
-  transition: background 0.3s ease-in-out;
+  color: #2d3748;
+  margin-bottom: 12px;
+  padding-left: 30px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.chetna-features-list li::before {
+  content: '✔';
+  color: #015e86;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
-.chetna_program_text li:hover {
-  background: #8fb0c4;
-}
-
-/* Problem Section with Image and List */
-.chetna_problem_section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  gap: 20px;
-  width: 90%;
-}
-
-.chetna_problem_section h2 {
-  font-size: 1.8rem;
+.chetna-features-list li:hover {
   color: #015e86;
-  margin-bottom: 15px;
-  width: 100%;
+}
+
+/* Problems Section */
+.chetna-problems-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(1, 94, 134, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chetna-problems-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(1, 94, 134, 0.15);
+}
+
+.chetna-problems-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #015e86;
+  margin-bottom: 25px;
   text-align: center;
 }
 
-/* Left Side - Image */
-.chetna_problem_image {
-  flex: 1;
-  max-width: 100%;
+.chetna-problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
-.chetna_problem_image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Right Side - List */
-.chetna_problem_list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: left;
-  width: 100%;
-}
-
-.chetna_problem_list ul {
+.chetna-problems-grid ul {
   list-style: none;
-  padding: 0;
-  margin: 10px;
-  flex: 1;
-  min-width: 250px;
 }
 
-.chetna_problem_list li {
+.chetna-problems-grid ul li {
   font-size: 1rem;
-  padding: 8px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  background: #286a86;
-  color: #ffffff;
-  transition: background 0.3s ease-in-out;
+  color: #2d3748;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.chetna_problem_list li:hover {
-  background: #004c6c;
-  color: #ffffff;
+.chetna-problems-grid ul li::before {
+  content: '•';
+  color: #015e86;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.chetna-problems-grid ul li:hover {
+  color: #015e86;
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
-  .chetna_program_text ul {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1024px) {
+  .chetna-content-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chetna-image-container {
+    max-width: 100%;
+  }
+
+  .chetna-heading {
+    font-size: 2.2rem;
+  }
+
+  .chetna-program-section h2,
+  .chetna-problems-section h2 {
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
-  .chetna_heading {
-    font-size: 1.5rem;
+  .chetna-container {
+    padding: 40px 15px;
   }
 
-  .chetna_program_text {
-    width: 95%;
+  .chetna-program-section,
+  .chetna-problems-section {
+    padding: 25px;
   }
 
-  .chetna_problem_section {
-    width: 95%;
-  }
-
-  .chetna_problem_list {
-    flex-direction: column;
-  }
-
-  .chetna_problem_list ul {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  .chetna_program_text h2,
-  .chetna_problem_section h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .chetna_container {
-    padding-top: 50px;
-  }
-
-  .chetna_program_text ul {
+  .chetna-problems-grid {
     grid-template-columns: 1fr;
   }
 
-  .chetna_program_text li,
-  .chetna_problem_list li {
-    font-size: 0.9rem;
-  }
-
-  .chetna_heading {
-    font-size: 1.3rem;
-    margin-top: 30px;
+  .chetna-heading {
+    font-size: 2rem;
   }
 }
 
+@media (max-width: 480px) {
+  .chetna-container {
+    padding: 20px 10px;
+  }
+
+  .chetna-heading {
+    font-size: 1.8rem;
+  }
+
+  .chetna-program-section h2,
+  .chetna-problems-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .chetna-text-content p,
+  .chetna-features-list li,
+  .chetna-problems-grid ul li {
+    font-size: 0.95rem;
+  }
+}

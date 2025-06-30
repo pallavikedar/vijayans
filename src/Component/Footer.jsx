@@ -35,19 +35,17 @@ function Footer() {
               <p> Home</p>
               <p> About</p>
               <p> Vijayan's Yoga</p>
-              <p> Student Say's</p>
+       
             </div>
             <div className="quick_link">
-              <p> Articles</p>
+             
               <p> FAQ</p>
               <p> Feedback</p>
               <p> Chetna</p>
             </div>
             <div className="quick_link">
               <p> Contact</p>
-              <p> Blog</p>
-              <p> Career</p>
-              <p> Sitemap</p>
+           
             </div>
           </div>
         </div>

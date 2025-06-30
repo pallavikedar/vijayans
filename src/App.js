@@ -8,6 +8,7 @@ import Article from "./Pages/Article";
 
 import Faq from "./Pages/Faq";
 import Chetna from "./Pages/Chetna";
+import ContactUs from "./Pages/Contact";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
      
           <Route path="/faq" element={<Faq />} />
           <Route path="/chetna" element={<Chetna />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>
