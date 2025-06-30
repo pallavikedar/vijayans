@@ -4,6 +4,13 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 
 const branches = [
+     {
+    title: "Jaripatka",
+    address: `Sindhu Society Main Rd, Indira Colony, Jaripatka, Nagpur, Maharashtra 440014`,
+    mobile: ["+91-9422439804/5", "+91-9823189804"],
+    email: "vijayan.yoga@gmail.com",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.2!2d79.088!3d21.1826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVijayan%27s%20Yoga!5e0!3m2!1sen!2sin!4vXXXXXXXXXXXX!5m2!1sen!2sin"
+    },
   {
     title: "Pratap Nagar",
     address: `Plot No. 1, Sarvodaya Nagar, Near Ram Mandir,
@@ -22,13 +29,7 @@ Opposite Union Bank Of India, Friends Colony Road, Nagpur.`,
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d930.1552686580064!2d79.045053!3d21.167473!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1ca40c20edd%3A0xa6c173481ea8f2bb!2sVijayan%27s%20Yoga!5e0!3m2!1sen!2sus!4v1751282589717!5m2!1sen!2sus",
   },
-  {
-    title: "Jaripatka",
-    address: `Sindhu Society Main Rd, Indira Colony, Jaripatka, Nagpur, Maharashtra 440014`,
-    mobile: ["+91-9422439804/5", "+91-9823189804"],
-    email: "vijayan.yoga@gmail.com",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.2!2d79.088!3d21.1826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVijayan%27s%20Yoga!5e0!3m2!1sen!2sin!4vXXXXXXXXXXXX!5m2!1sen!2sin"
-    },
+ 
 ];
 
 const ContactUs = () => {
