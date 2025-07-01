@@ -35,7 +35,7 @@ const SessionsVideo = () => {
 
   return (
     <div className="sessions-video-container">
-    <h1 className="section_title1">Session videos</h1>
+
       <Swiper
         modules={[Pagination, Navigation]}
         pagination={{ clickable: true }}
