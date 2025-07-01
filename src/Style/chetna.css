@@ -98,7 +98,7 @@
 
 .chetna-text-content {
   flex: 2;
-  min-width: 300px;
+  width: 100%;
 }
 
 .chetna-text-content p {

@@ -83,44 +83,40 @@ const TestimonialSlidervideo = () => {
   const isInView = useInView(containerRef, { once: true });
 
   return (
-    <motion.div
-      ref={containerRef}
+   <div
+      // Removed: ref={containerRef}
       className="testimonial-slider2"
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1 }}
+      // Removed: initial, animate, transition
       onClick={handleUserInteraction}
     >
       {/* Health Benefits Section */}
-      <motion.div
+      {/* Removed motion.div, replaced with div */}
+      <div
         className="health-container"
-        initial={{ opacity: 0, x: -50 }}
-        animate={isInView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 1, delay: 0.2 }}
+        // Removed: initial, animate, transition
       >
         <h1 className="health-title">Transform Your Health & Fitness!</h1>
         <ul className="health-list">
           {benefits.map((benefit, index) => (
-            <motion.li
+            // Removed motion.li, replaced with li
+            <li
               key={index}
               className="health-item"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              // Removed: initial, animate, transition
             >
               {benefit.icon}
               <strong>{benefit.text}</strong>
-            </motion.li>
+            </li>
           ))}
         </ul>
-      </motion.div>
+      </div>
 
       {/* Testimonial Video Section */}
-      <motion.div
+     {/* Testimonial Video Section */}
+      {/* Removed motion.div, replaced with div */}
+      <div
         className="testimonial-card"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 1, delay: 0.5 }}
+        // Removed: initial, animate, transition
       >
         <video ref={videoRef} key={testimonials[currentIndex].video} controls>
           <source src={testimonials[currentIndex].video} type="video/mp4" />
@@ -129,16 +125,17 @@ const TestimonialSlidervideo = () => {
         <p className="testimonial-text">"{testimonials[currentIndex].text}"</p>
         <div className="dots-container">
           {testimonials.map((_, index) => (
-            <motion.span
+            // Removed motion.span, replaced with span
+            <span
               key={index}
               className={`dot ${index === currentIndex ? "active" : ""}`}
               onClick={() => setCurrentIndex(index)}
-              whileHover={{ scale: 1.2 }}
-            ></motion.span>
+              // Removed: whileHover
+            ></span>
           ))}
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

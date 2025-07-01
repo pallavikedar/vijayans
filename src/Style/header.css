@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 15px 20px;
-  background: linear-gradient(180deg, #edfdfe 0%, #ebfdfe 100%);
+  padding: 3px 20px;
+  background: linear-gradient(120deg, #fefff7 0%, #aff6ff 100%);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
   width: 100%;
@@ -31,14 +31,14 @@
 
 .navlink {
   text-decoration: none;
-  color: #333;
+  color:#025b67;
   font-size: 20px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .navlink:hover {
-  color: #007bff;
+  color: #252d2e ;
 }
 
 .hamburger {
